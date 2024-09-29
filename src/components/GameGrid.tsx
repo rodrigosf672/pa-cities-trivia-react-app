@@ -7,23 +7,87 @@ type City = {
 };
 
 const citiesData: City[] = [
-  { name: "Philadelphia", image: "/images/philadelphia.jpg", fact: "The Liberty Bell is here!" },
-  { name: "Pittsburgh", image: "/images/pittsburgh.jpg", fact: "Known for its many bridges." },
-  { name: "Harrisburg", image: "/images/harrisburg.jpg", fact: "The capital of Pennsylvania." },
-  { name: "Allentown", image: "/images/allentown.jpg", fact: "Known for Billy Joel's famous song." },
-  { name: "Erie", image: "/images/erie.jpg", fact: "Located on the shore of a lake." },
-  { name: "Scranton", image: "/images/scranton.jpg", fact: "Famous for 'The Office' TV show." },
-  { name: "Lancaster", image: "/images/lancaster.jpg", fact: "Famous for its Amish community." },
-  { name: "Bethlehem", image: "/images/bethlehem.jpg", fact: "Known for its Christmas traditions." },
-  { name: "Reading", image: "/images/reading.jpg", fact: "Known more for its railroads than for its name's literary association." },
-  { name: "York", image: "/images/york.jpg", fact: "Not the Big Apple, but it's known for its rich colonial history." },
-  { name: "Wilkes-Barre", image: "/images/wilkesbarre.jpg", fact: "Located near the Pocono Mountains. Has a dash in the name." },
-  { name: "Altoona", image: "/images/altoona.jpg", fact: "Home of the Horseshoe Curve." },
-  { name: "Johnstown", image: "/images/johnstown.jpg", fact: "Known for the Great Flood of 1889." },
-  { name: "Chester", image: "/images/chester.jpg", fact: "The oldest city of PA, right along the Delaware River." },
-  { name: "Easton", image: "/images/easton.jpg", fact: "Home to the Crayola Experience. Not Northon, not Weston, it's rather..." },
-  { name: "State College", image: "/images/statecollege.jpg", fact: "Home to Penn State University." },
-];
+    {
+      name: "Philadelphia",
+      image: `${process.env.PUBLIC_URL}/images/philadelphia.jpg`,
+      fact: "The Liberty Bell is here!",
+    },
+    {
+      name: "Pittsburgh",
+      image: `${process.env.PUBLIC_URL}/images/pittsburgh.jpg`,
+      fact: "Known for its many bridges.",
+    },
+    {
+      name: "Harrisburg",
+      image: `${process.env.PUBLIC_URL}/images/harrisburg.jpg`,
+      fact: "The capital of Pennsylvania.",
+    },
+    {
+      name: "Allentown",
+      image: `${process.env.PUBLIC_URL}/images/allentown.jpg`,
+      fact: "Known for Billy Joel's famous song.",
+    },
+    {
+      name: "Erie",
+      image: `${process.env.PUBLIC_URL}/images/erie.jpg`,
+      fact: "Located on the shore of a lake.",
+    },
+    {
+      name: "Scranton",
+      image: `${process.env.PUBLIC_URL}/images/scranton.jpg`,
+      fact: "Famous for 'The Office' TV show.",
+    },
+    {
+      name: "Lancaster",
+      image: `${process.env.PUBLIC_URL}/images/lancaster.jpg`,
+      fact: "Famous for its Amish community.",
+    },
+    {
+      name: "Bethlehem",
+      image: `${process.env.PUBLIC_URL}/images/bethlehem.jpg`,
+      fact: "Known for its Christmas traditions.",
+    },
+    {
+      name: "Reading",
+      image: `${process.env.PUBLIC_URL}/images/reading.jpg`,
+      fact: "Known more for its railroads than for its name's literary association.",
+    },
+    {
+      name: "York",
+      image: `${process.env.PUBLIC_URL}/images/york.jpg`,
+      fact: "Not the Big Apple, but it's known for its rich colonial history.",
+    },
+    {
+      name: "Wilkes-Barre",
+      image: `${process.env.PUBLIC_URL}/images/wilkesbarre.jpg`,
+      fact: "Located near the Pocono Mountains. Has a dash in the name.",
+    },
+    {
+      name: "Altoona",
+      image: `${process.env.PUBLIC_URL}/images/altoona.jpg`,
+      fact: "Home of the Horseshoe Curve.",
+    },
+    {
+      name: "Johnstown",
+      image: `${process.env.PUBLIC_URL}/images/johnstown.jpg`,
+      fact: "Known for the Great Flood of 1889.",
+    },
+    {
+      name: "Chester",
+      image: `${process.env.PUBLIC_URL}/images/chester.jpg`,
+      fact: "The oldest city of PA, right along the Delaware River.",
+    },
+    {
+      name: "Easton",
+      image: `${process.env.PUBLIC_URL}/images/easton.jpg`,
+      fact: "Home to the Crayola Experience. Not Northon, not Weston, it's rather...",
+    },
+    {
+      name: "State College",
+      image: `${process.env.PUBLIC_URL}/images/statecollege.jpg`,
+      fact: "Home to Penn State University.",
+    },
+  ];
 
 const shuffleArray = (array: any[]) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -119,7 +183,7 @@ const GameGrid = () => {
   };
 
   const playCelebration = () => {
-    const audio = new Audio('/sounds/clapping.wav');
+    const audio = new Audio(`${process.env.PUBLIC_URL}/sounds/clapping.wav`);
     audio.oncanplaythrough = () => audio.play();
     const fireworks = document.createElement('div');
     fireworks.style.position = 'fixed';
@@ -127,7 +191,7 @@ const GameGrid = () => {
     fireworks.style.left = '0';
     fireworks.style.width = '100%';
     fireworks.style.height = '100%';
-    fireworks.style.backgroundImage = 'url(/images/fireworks.gif)';
+    fireworks.style.backgroundImage = `url(${process.env.PUBLIC_URL}/images/fireworks.gif)`;
     fireworks.style.backgroundSize = 'cover';
     fireworks.style.opacity = '0.5';
     fireworks.style.pointerEvents = 'none';
