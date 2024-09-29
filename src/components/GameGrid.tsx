@@ -146,10 +146,8 @@ const GameGrid = () => {
 
   const handleSubmitGuess = () => {
     if (selectedCity === null) {
-      // No square selected, show yellow warning
       setFeedback("⚠️ Select a square!");
     } else if (correctCities.includes(selectedCity)) {
-      // Square already guessed correctly, show yellow warning
       setFeedback("⚠️ Select a new square!");
     } else if (guess.toLowerCase() === cities[selectedCity].name.toLowerCase()) {
       setCorrectCities((prevCorrectCities) => {

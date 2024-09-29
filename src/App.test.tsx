@@ -1,12 +1,10 @@
-// src/App.test.tsx
-
 import React from 'react';
 
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import GameGrid from './components/GameGrid';
 
-// City data array (ensure this matches the data in your GameGrid.tsx)
+// City data array
 const citiesData = [
   { name: "Philadelphia", image: "/images/philadelphia.jpg", fact: "The Liberty Bell is here!" },
   { name: "Pittsburgh", image: "/images/pittsburgh.jpg", fact: "Known for its many bridges." },
