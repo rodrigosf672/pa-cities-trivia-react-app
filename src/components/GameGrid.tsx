@@ -145,11 +145,15 @@ const GameGrid = () => {
   };
 
   const handleSubmitGuess = () => {
+    const correctAnswerAudio = new Audio(`${process.env.PUBLIC_URL}/sounds/rightanswer.mp3`);
+    const wrongAnswerAudio = new Audio(`${process.env.PUBLIC_URL}/sounds/wronganswer.mp3`);
+  
     if (selectedCity === null) {
       setFeedback("⚠️ Select a square!");
     } else if (correctCities.includes(selectedCity)) {
       setFeedback("⚠️ Select a new square!");
     } else if (guess.toLowerCase() === cities[selectedCity].name.toLowerCase()) {
+      correctAnswerAudio.play();
       setCorrectCities((prevCorrectCities) => {
         if (!prevCorrectCities.includes(selectedCity)) {
           return [...prevCorrectCities, selectedCity];
@@ -158,6 +162,7 @@ const GameGrid = () => {
       });
       setFeedback("🎉 Congrats! You got it! 🎉");
     } else {
+      wrongAnswerAudio.play();
       setFeedback("❌ You failed! Try again.");
     }
   };
