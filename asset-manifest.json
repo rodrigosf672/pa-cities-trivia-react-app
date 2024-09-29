@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/pa-cities-trivia-react-app/static/css/main.dc4d6ff2.css",
+    "main.css": "/pa-cities-trivia-react-app/static/css/main.5350f686.css",
     "main.js": "/pa-cities-trivia-react-app/static/js/main.afd677cc.js",
     "index.html": "/pa-cities-trivia-react-app/index.html",
-    "main.dc4d6ff2.css.map": "/pa-cities-trivia-react-app/static/css/main.dc4d6ff2.css.map",
+    "main.5350f686.css.map": "/pa-cities-trivia-react-app/static/css/main.5350f686.css.map",
     "main.afd677cc.js.map": "/pa-cities-trivia-react-app/static/js/main.afd677cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc4d6ff2.css",
+    "static/css/main.5350f686.css",
     "static/js/main.afd677cc.js"
   ]
 }
